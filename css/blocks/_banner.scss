@@ -1,0 +1,100 @@
+.banner {
+  position: relative;
+  padding: 260px 0 520px;
+  @include media-laptop {
+    padding: 180px 0 380px;
+  }
+  @include media-tablet {
+    padding: 115px 0 30px;
+  }
+  &__wrapper {
+    display: flex;
+    justify-content: space-between;
+    gap: 45px;
+    @include media-laptop {
+      display: block;
+    }
+  }
+  &__text {
+    max-width: 910px;
+    @include media-tablet {
+      margin-bottom: 40px;
+    }
+  }
+  &__h1 {
+    margin-bottom: 30px;
+    font: 700 55px/1.1 $fontEE;
+    text-transform: uppercase;
+    color: #fff;
+    @include media-laptop {
+      margin-bottom: 20px;
+      font-size: 36px;
+    }
+    @include media-tablet {
+      margin-bottom: 10px;
+      font-size: 17px;
+    }
+  }
+  &__descr {
+    max-width: 400px;
+    font: 20px/1.1 $font;
+    @include media-laptop {
+      font-size: 16px;
+    }
+    @include media-tablet {
+      max-width: 240px;
+      font-size: 12px;
+    }
+  }
+  &__ui-button {
+    align-self: flex-start;
+    margin-top: 30px;
+    padding: 22px 56px;
+    font-size: 18px;
+    border-width: 4px;
+    @include media-laptop {
+      padding: 18px 40px;
+      font-size: 16px;
+    }
+    @include media-tablet {
+      width: 100%;
+      margin-top: 40px;
+      padding: 14px 20px;
+      font-size: 12px;
+      border-width: 2px;
+    }
+  }
+  &__img {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    height: 464px;
+    @include media-laptop {
+      height: 320px;
+    }
+    @include media-tablet {
+      position: relative;
+      height: 215px;
+      margin-right: -15px;
+      margin-left: -15px;
+    }
+    img {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      max-width: unset;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+  &__parallax {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    clip: rect(0, auto, auto, 0);
+  }
+}

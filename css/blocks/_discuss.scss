@@ -1,0 +1,54 @@
+.discuss {
+  display: grid;
+  grid-template-columns: 46% 1fr;
+  gap: 70px;
+  @include media-laptop {
+    grid-template-columns: 38% 1fr;
+    gap: 40px;
+  }
+  @include media-tablet {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+  }
+  &__descr {
+    margin-bottom: 55px;
+    font: 20px/1.1 $font;
+    color: $grey20;
+    @include media-laptop {
+      margin-bottom: 30px;
+      font-size: 16px;
+    }
+    @include media-tablet {
+      margin-bottom: 0;
+      font-size: 12px;
+    }
+  }
+  &__img {
+    @include media-tablet {
+      display: none;
+    }
+  }
+  &__form {
+    &-line {
+      &:not(:first-child) {
+        margin-top: 40px;
+        @include media-laptop {
+          margin-top: 25px;
+        }
+      }
+    }
+    &-agree {
+      margin-top: 5px;
+      font: 500 14px/1.1 $font;
+      text-align: center;
+      color: $grey50;
+      @include media-tablet {
+        font-size: 9px;
+      }
+    }
+  }
+  &__ui-button {
+    width: 100%;
+  }
+}

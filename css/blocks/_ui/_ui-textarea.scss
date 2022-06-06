@@ -1,0 +1,38 @@
+.ui-textarea {
+  position: relative;
+  textarea {
+    width: 100%;
+    padding: 10px;
+    font: 16px/1.1 $fontEE;
+    color: #fff;
+    background: transparent;
+    border: 1px solid $grey10;
+    border-radius: 0;
+    outline: 0;
+    resize: vertical;
+    -webkit-appearance: none;
+    @include media-laptop {
+      font-size: 14px;
+    }
+    @include media-tablet {
+      padding: 10px 5px;
+      font-size: 10px;
+    }
+    &::-webkit-input-placeholder {
+      text-transform: uppercase;
+      color: #fff;
+    }
+    &::-moz-placeholder {
+      text-transform: uppercase;
+      color: #fff;
+    }
+    &:-ms-input-placeholder {
+      text-transform: uppercase;
+      color: #fff;
+    }
+    &::placeholder {
+      text-transform: uppercase;
+      color: #fff;
+    }
+  }
+}

@@ -1,0 +1,30 @@
+.gallery-slider {
+  position: relative;
+  &__head {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 35px;
+    @include media-tablet {
+      margin-bottom: 20px;
+    }
+  }
+  &__item {
+    width: 630px;
+    border-radius: 10px;
+    aspect-ratio: 1 / 0.71;
+    overflow: hidden;
+    @include media-laptop {
+      width: 400px;
+    }
+    @include media-tablet {
+      width: 290px;
+      aspect-ratio: 1 / 0.55;
+    }
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+}

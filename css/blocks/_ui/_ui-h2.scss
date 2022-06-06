@@ -1,0 +1,16 @@
+.ui-h2 {
+  font: 700 45px/1.1 $fontEE;
+  text-transform: uppercase;
+  @include media-laptop {
+    font-size: 30px;
+  }
+  @include media-tablet {
+    font-size: 17px;
+  }
+  &--section {
+    margin-bottom: 30px;
+    @include media-tablet {
+      margin-bottom: 20px;
+    }
+  }
+}

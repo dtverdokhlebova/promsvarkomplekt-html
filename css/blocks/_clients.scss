@@ -1,0 +1,48 @@
+.clients {
+  .swiper {
+    max-width: 100%;
+    width: fit-content;
+    margin: 0 auto;
+    @include media-laptop {
+      overflow: visible;
+    }
+  }
+  &__ui-swiper-scrollbar {
+    margin-top: 12px;
+  }
+  &__item {
+    width: 300px;
+    height: auto;
+    padding: 14px 10px 10px;
+    text-align: center;
+    color: $grey20;
+    border: 1px solid $grey40;
+    border-radius: 5px;
+    @include media-laptop {
+      width: 240px;
+    }
+    @include media-tablet {
+      width: 134px;
+      padding: 10px;
+    }
+  }
+  &__icon {
+    width: 172px;
+    margin: 0 auto 10px;
+    @include media-laptop {
+      width: 115px;
+    }
+    @include media-tablet {
+      width: 70px;
+    }
+  }
+  &__name {
+    font: 18px/1.1 $fontEE;
+    @include media-laptop {
+      font-size: 14px;
+    }
+    @include media-tablet {
+      font-size: 8px;
+    }
+  }
+}

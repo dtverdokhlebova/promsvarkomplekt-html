@@ -1,0 +1,114 @@
+.contacts {
+  position: relative;
+  padding: 80px 0;
+  @include media-laptop {
+    padding-top: 60px;
+  }
+  @include media-tablet {
+    padding: 0;
+  }
+  &__head {
+    display: none;
+    @include media-tablet {
+      display: block;
+      margin-bottom: 10px;
+    }
+  }
+  &__map {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    [class*='ymaps-2'] {
+      [class*='-ground-pane'] {
+        filter: invert(1) grayscale(100%);
+      }
+      [class*='-copyright_logo_no'] {
+        top: -35px;
+      }
+    }
+    @include media-tablet {
+      position: static;
+      height: 160px;
+    }
+  }
+  &__wrapper {
+    position: relative;
+    width: 450px;
+    padding: 40px 50px;
+    background: $black;
+    border-radius: 10px;
+    @include media-laptop {
+      width: 380px;
+      padding: 35px;
+    }
+    @include media-tablet {
+      width: auto;
+      padding: 15px 0 30px;
+    }
+  }
+  &__title {
+    margin-bottom: 18px;
+    @include media-tablet {
+      display: none;
+    }
+  }
+  &__info {
+    margin-bottom: 20px;
+    @include media-tablet {
+      margin-bottom: 0;
+    }
+    &-item {
+      &:not(:last-child) {
+        margin-bottom: 15px;
+      }
+    }
+    &-title {
+      margin-bottom: 5px;
+      font: 16px/1.1 $fontEE;
+      color: #686868;
+      @include media-laptop {
+        font-size: 14px;
+      }
+      @include media-tablet {
+        font-size: 11px;
+      }
+    }
+    &-text {
+      font: 500 18px/1 $font;
+      @include media-laptop {
+        font-size: 16px;
+      }
+      @include media-tablet {
+        max-width: 230px;
+        font-size: 13px;
+      }
+      p:not(:last-child) {
+        margin-bottom: 5px;
+      }
+    }
+  }
+  &__social {
+    display: flex;
+    gap: 10px;
+    @include media-tablet {
+      position: absolute;
+      top: 18px;
+      right: 0;
+    }
+    &-item {
+      display: block;
+      width: 36px;
+      height: 36px;
+      @include media-laptop {
+        width: 30px;
+        height: 30px;
+      }
+      @include media-tablet {
+        width: 26px;
+        height: 26px;
+      }
+    }
+  }
+}

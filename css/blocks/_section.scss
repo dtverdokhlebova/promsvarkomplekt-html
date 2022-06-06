@@ -1,0 +1,14 @@
+.section {
+  margin-top: 120px;
+  @include media-laptop {
+    margin-top: 90px;
+  }
+  @include media-tablet {
+    margin-top: 60px;
+  }
+  &--laptop-hidden {
+    @include media-laptop {
+      overflow: hidden;
+    }
+  }
+}

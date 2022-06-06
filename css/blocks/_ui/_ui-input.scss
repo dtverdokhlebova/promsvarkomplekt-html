@@ -1,0 +1,97 @@
+.ui-input {
+  position: relative;
+  font: 16px/1.1 $fontEE;
+  @include media-laptop {
+    font-size: 14px;
+  }
+  @include media-tablet {
+    font-size: 10px;
+  }
+  input {
+    width: 100%;
+    padding: 0 0 10px;
+    font: inherit;
+    color: #fff;
+    background: transparent;
+    border: 1px solid $grey10;
+    border-width: 0 0 1px;
+    border-radius: 0;
+    outline: none;
+    -webkit-appearance: none;
+    &:focus,
+    &.filled {
+      ~ label {
+        opacity: 0;
+      }
+    }
+    &.error {
+      border-color: $red;
+      ~ label {
+        color: $red;
+      }
+      ~ .ui-input__error {
+        display: block;
+      }
+    }
+  }
+  label {
+    position: absolute;
+    top: 0;
+    left: 0;
+    font: inherit;
+    text-transform: uppercase;
+    pointer-events: none;
+  }
+  &__error {
+    position: absolute;
+    bottom: 22px;
+    left: 28%;
+    display: none;
+    padding: 7px 14px;
+    font: 14px/1 $fontEE;
+    color: $red;
+    background: $black;
+    border: 1px solid $red;
+    animation: fade-in 0.3s;
+    @include media-laptop {
+      bottom: 18px;
+      left: 20%;
+    }
+    @include media-tablet {
+      bottom: 12px;
+      padding: 5px 8px;
+      font-size: 12px;
+    }
+    &::before {
+      content: '';
+      position: absolute;
+      bottom: -6px;
+      left: 22%;
+      width: 10px;
+      height: 10px;
+      background: inherit;
+      border: 1px solid $red;
+      border-width: 0 1px 1px 0;
+      transform: rotate(45deg);
+      @include media-tablet {
+        bottom: -4px;
+        width: 6px;
+        height: 6px;
+      }
+    }
+  }
+  &--border {
+    input {
+      padding: 11px 10px;
+      border-width: 1px;
+      @include media-tablet {
+        padding: 7px 10px;
+      }
+    }
+    label {
+      top: 50%;
+      left: 10px;
+      transform: translateY(-50%);
+    }
+  }
+}

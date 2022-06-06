@@ -1,0 +1,40 @@
+.loader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: 100vh;
+  background: $black;
+  &__icon {
+    width: 190px;
+    @include media-tablet {
+      width: 140px;
+    }
+  }
+  &__anim {
+    animation: loader-spin 6s linear infinite;
+    transform-origin: center;
+    &--s {
+      animation-duration: 5px;
+    }
+    &--m {
+      animation-duration: 7px;
+    }
+  }
+  svg {
+    max-width: 100%;
+    path {
+      transform-box: fill-box;
+    }
+  }
+}
+
+@keyframes loader-spin {
+  100% {
+    transform: rotate(360deg);
+  }
+}
