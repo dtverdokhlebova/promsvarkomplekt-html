@@ -37,14 +37,12 @@
       &__wrapper {
         width: 95%;
         max-width: 840px;
-        padding: 35px 105px 55px;
         @include media-laptop {
-          padding: 35px 65px;
+          max-width: 650px;
         }
         @include media-tablet {
           width: 100%;
           min-height: 100vh;
-          padding: 15px 25px;
         }
       }
     }
@@ -74,6 +72,14 @@
   }
 }
 .popup-app {
+  padding: 35px 105px 55px;
+  background: $black;
+  @include media-laptop {
+    padding: 35px 65px;
+  }
+  @include media-tablet {
+    padding: 15px 25px;
+  }
   &__img {
     display: none;
     opacity: 0;

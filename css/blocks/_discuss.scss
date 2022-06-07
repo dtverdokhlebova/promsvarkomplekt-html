@@ -1,10 +1,9 @@
 .discuss {
   display: grid;
-  grid-template-columns: 46% 1fr;
-  gap: 70px;
+  grid-template-columns: 46% 49%;
+  justify-content: space-between;
   @include media-laptop {
-    grid-template-columns: 38% 1fr;
-    gap: 40px;
+    grid-template-columns: 38% 58%;
   }
   @include media-tablet {
     display: flex;

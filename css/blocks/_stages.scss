@@ -37,6 +37,7 @@
     &-swiper-scrollbar {
       display: none;
       @include media-laptop {
+        display: block;
         margin-top: 12px;
       }
     }
