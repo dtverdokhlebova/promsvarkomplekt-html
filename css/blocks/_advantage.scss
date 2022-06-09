@@ -3,6 +3,7 @@
   padding: 100px 0 80px;
   background: url('../img/advantage_bg.jpg') no-repeat center;
   background-size: cover;
+  image-rendering: -webkit-optimize-contrast;
   @include media-laptop {
     padding: 70px 0 60px;
   }

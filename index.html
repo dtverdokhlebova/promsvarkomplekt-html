@@ -7,20 +7,18 @@
   <meta content="width=device-width, initial-scale=1" name="viewport">
   <meta content="ie=edge" http-equiv="x-ua-compatible">
   <link href="." rel="icon" type="image/x-icon">
-  <link rel="stylesheet" href="libs/fancybox/fancybox.css" />
-    <link rel="stylesheet" href="libs/swiper/swiper-bundle.min.css" />
-    <link rel="stylesheet" href="libs/select2/select2.min.css" />
-    <link rel="stylesheet" href="css/style.min.css">
-    <script src="https://api-maps.yandex.ru/2.1/?apikey=7742add4-5d3c-4060-9f01-67963d12fb4e&lang=ru_RU" type="text/javascript"></script>
+  <link rel="stylesheet" href="css/style.css">
+  <script src="https://api-maps.yandex.ru/2.1/?apikey=7742add4-5d3c-4060-9f01-67963d12fb4e&lang=ru_RU"
+    type="text/javascript"></script>
 </head>
 
 <body>
   <div class="wrapper">
     <header class="header">
       <div class="inner">
-        <div class="header__wrapper"><a class="header__logo" href="#">
-            <div class="header__logo-visible"><img src="img/logo.png" alt=""></div>
-            <div class="header__logo-hidden"><img src="img/logo-hidden.png" alt=""></div>
+        <div class="header__wrapper">
+          <a class="header__logo" href="#">
+            <img src="img/logo.png" alt="">
           </a>
           <div class="header__email"> <a class="ui-button ui-button--link" href="mailto:promsvarkomplekt@mail.ru"><span
                 class="ui-button__text">promsvarkomplekt@mail.ru</span></a>
@@ -59,9 +57,13 @@
               <div class="header__phones-drop header__phones-drop--top"><a class="ui-button ui-button--link"
                   href="tel:+7(4742)545237"><span class="ui-button__text">+7 (4742) 54-52-37</span></a>
               </div>
-            </div><a class="ui-button header__ui-button ui-button--white" href="#"><span
-                class="ui-button__text">Заказать звонок</span></a><a class="header__email"
-              href="mailto:promsvarkomplekt@mail.ru">promsvarkomplekt@mail.ru </a>
+            </div>
+              <a class="ui-button header__ui-button ui-button--white" href="#">
+                <span class="ui-button__text">Заказать звонок</span>
+              </a>
+              <a class="ui-button ui-button--link" href="mailto:promsvarkomplekt@mail.ru">
+                <span class="ui-button__text">promsvarkomplekt@mail.ru</span>
+              </a>
           </div>
         </div>
       </div>
@@ -76,9 +78,13 @@
               <div class="banner__descr">Металлоконструкции различной степени сложности и разработка чертежей КМД.</div>
             </div>
             <div class="banner__img">
-              <div class="banner__parallax"><img src="img/banner_img.jpg" alt="" /></div>
-            </div><a class="ui-button banner__ui-button js-anchor" href="#section-discuss"><span class="ui-button__text">Обсудить
-                проект</span></a>
+              <div class="banner__parallax">
+                <img src="img/banner_img.jpg" alt="" />
+              </div>
+            </div>
+            <a class="ui-button banner__ui-button js-popup-app" href="#popup-app">
+              <span class="ui-button__text">Обсудить проект</span>
+            </a>
           </div>
         </div>
       </div>
@@ -174,17 +180,17 @@
               <div class="advantage-form">
                 <div class="advantage-form__title">Убедитесь в этом сами! Оставьте заявку и мы вам перезвоним. </div>
                 <div class="advantage-form__wrapper">
-                  <div class="advantage-form__main">
+                  <form class="advantage-form__main" action="#">
                     <div class="ui-input ui-input--border">
-                      <input id="advantagePhone" type="text" />
+                      <input id="advantagePhone" name="advantagePhone" type="text" />
                       <label for="advantagePhone">Номер телефона</label>
                       <div class="ui-input__error">заполните это поле</div>
                     </div>
                     <button class="ui-button advantage-form__ui-button ui-button--fill" type="submit"><span
                         class="ui-button__text">Отправить</span>
                     </button>
-                  </div>
-                  <div class="advantage-form__agree">Нажимая кнопку отправить, вы соглашаетесь с <a href="#">политикой
+                  </form>
+                  <div class="advantage-form__agree">Нажимая кнопку отправить, вы соглашаетесь с <a class="ui-link" href="#">политикой
                       конфиденциальности</a>
                   </div>
                 </div>
@@ -227,7 +233,7 @@
       </section>
       <section class="section">
         <div class="about-company">
-          <div class="inner">
+          <div class="inner about-company__inner">
             <div class="about-company__wrapper">
               <div class="about-company__content">
                 <h2 class="ui-h2 about-company__ui-h2">О компании
@@ -286,7 +292,9 @@
                 <div class="swiper-scrollbar">
                 </div>
               </div>
-            </div><a class="ui-button stages__ui-button js-anchor" href="#section-discuss"><span class="ui-button__text">Обсудить проект</span>
+            </div>
+            <a class="ui-button stages__ui-button js-popup-app" href="#popup-app">  
+              <span class="ui-button__text">Обсудить проект</span>
             </a>
           </div>
         </div>
@@ -368,24 +376,24 @@
                 и обсудим все детали проекта.</div>
               <div class="discuss__img"><img src="img/frame_img.png" alt="" /></div>
             </div>
-            <div class="discuss__form">
+            <form class="discuss__form" action="#">
               <div class="discuss__form-line">
                 <div class="ui-input">
-                  <input class="error" id="discussName" type="text" />
+                  <input class="error" id="discussName" name="discussName" type="text" />
                   <label for="discussName">Ваше имя</label>
                   <div class="ui-input__error">заполните это поле</div>
                 </div>
               </div>
               <div class="discuss__form-line">
                 <div class="ui-input">
-                  <input id="discussPhone" type="text" />
+                  <input id="discussPhone" name="discussPhone" type="text" />
                   <label for="discussPhone">Номер телефона</label>
                   <div class="ui-input__error">заполните это поле</div>
                 </div>
               </div>
               <div class="discuss__form-line">
                 <div class="ui-select">
-                  <select>
+                  <select id="discussService" name="discussService">
                     <option>Выберите интересующую вас услугу</option>
                     <option>Металлоконструкции различного вида</option>
                     <option>Наплавка и восстановление</option>
@@ -398,8 +406,7 @@
               </div>
               <div class="discuss__form-line">
                 <div class="ui-textarea">
-                  <textarea placeholder="Вопрос" rows="5"></textarea>
-                  <div class="ui-textarea__counter"></div>
+                  <textarea id="discussText" name="discussText" placeholder="Вопрос" rows="5"></textarea>
                 </div>
               </div>
               <div class="discuss__form-line">
@@ -407,10 +414,10 @@
                     заявку</span>
                 </button>
               </div>
-              <div class="discuss__form-agree">Нажимая кнопку отправить, вы соглашаетесь с <a href="#">политикой
+              <div class="discuss__form-agree">Нажимая кнопку отправить, вы соглашаетесь с <a class="ui-link"  href="#">политикой
                   конфиденциальности</a>
               </div>
-            </div>
+            </form>
           </div>
         </div>
       </section>
@@ -508,21 +515,21 @@
           <form class="popup-app__form" action="#">
             <div class="popup-app__form-line">
               <div class="ui-input">
-                <input class="error" id="popupAppName" type="text" />
+                <input class="error" id="popupAppName" name="popupAppName" type="text" />
                 <label for="popupAppName">Ваше имя</label>
                 <div class="ui-input__error">заполните это поле</div>
               </div>
             </div>
             <div class="popup-app__form-line">
               <div class="ui-input">
-                <input id="popupAppPhone" type="text" />
+                <input id="popupAppPhone" name="popupAppPhone" type="text" />
                 <label for="popupAppPhone">Номер телефона</label>
                 <div class="ui-input__error">заполните это поле</div>
               </div>
             </div>
             <div class="popup-app__form-line">
               <div class="ui-select">
-                <select>
+                <select id="popupAppService" name="popupAppService">
                   <option>Металлоконструкции различного вида</option>
                   <option>Наплавка и восстановление</option>
                   <option>Разработка чертежей КМД</option>
@@ -534,8 +541,7 @@
             </div>
             <div class="popup-app__form-line">
               <div class="ui-textarea">
-                <textarea placeholder="Вопрос" rows="5"></textarea>
-                <div class="ui-textarea__counter"></div>
+                <textarea id="popupAppText" name="popupAppText" placeholder="Вопрос" rows="5"></textarea>
               </div>
             </div>
             <div class="popup-app__form-line">
@@ -543,7 +549,7 @@
                   заявку</span>
               </button>
             </div>
-            <div class="popup-app__form-agree">Нажимая кнопку отправить, вы соглашаетесь с <a href="#">политикой
+            <div class="popup-app__form-agree">Нажимая кнопку отправить, вы соглашаетесь с <a class="ui-link" href="#">политикой
                 конфиденциальности</a>
             </div>
           </form>
@@ -587,11 +593,11 @@
     <footer class="footer">
       <div class="inner">
         <div class="footer__wrapper">
-          <div class="footer__made">Разработка сайта <a href="#">“Генерация”</a>
+          <div class="footer__made">Разработка сайта <a class="ui-link" href="#">“Генерация”</a>
           </div>
           <div class="footer__links">
-            <div class="footer__links-item"><a href="#">Политика конфиденциальности </a></div>
-            <div class="footer__links-item"><a href="#">Пользовательское соглашение</a></div>
+            <div class="footer__links-item"><a class="ui-link" href="#">Политика конфиденциальности </a></div>
+            <div class="footer__links-item"><a class="ui-link" href="#">Пользовательское соглашение</a></div>
           </div>
           <div class="footer__to-top">наверх </div>
         </div>

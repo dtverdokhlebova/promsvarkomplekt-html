@@ -3,9 +3,6 @@
 *::after {
   box-sizing: border-box;
 }
-*:focus {
-  outline: none;
-}
 html {
   box-sizing: border-box;
   line-height: 1;
@@ -20,41 +17,12 @@ html {
 body {
   margin: 0;
 }
+a {
+  transition: ease 0.3s;
+}
 img {
   max-width: 100%;
-}
-a {
-  text-decoration: none;
-  color: inherit;
-  transition: ease 0.3s;
-  &:hover {
-    color: $brown;
-  }
-}
-ul {
-  margin: 0;
-  padding: 0;
-  list-style: none;
-}
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-p,
-pre,
-span,
-ul,
-ol,
-li,
-tr,
-td,
-th,
-table,
-blockquote {
-  margin: 0;
-  padding: 0;
+  image-rendering: -webkit-optimize-contrast;
 }
 .wrapper {
   position: relative;
@@ -81,5 +49,5 @@ blockquote {
   }
   .main {
     flex: 1 0;
-  }
+  } 
 }

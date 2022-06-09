@@ -1,0 +1,7 @@
+.ui-link {
+  text-decoration: none;
+  color: inherit;
+  &:hover {
+    color: $brown;
+  }
+}

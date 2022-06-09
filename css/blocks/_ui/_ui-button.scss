@@ -7,6 +7,7 @@
   padding: 16px 28px;
   font: 700 18px/1.1 $font;
   text-transform: uppercase;
+  text-decoration: none;
   letter-spacing: 0.06em;
   white-space: nowrap;
   color: $brown;
@@ -46,6 +47,9 @@
     &::before {
       transform: scaleY(1);
     }
+  }  
+  &:focus {
+    outline: none;
   }
   &--fill {
     color: #fff;

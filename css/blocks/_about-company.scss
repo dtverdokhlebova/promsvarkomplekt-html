@@ -2,12 +2,18 @@
   padding: 110px 0;
   background: url('../img/about_company_bg.jpg') no-repeat center;
   background-size: cover;
+  image-rendering: -webkit-optimize-contrast;
   @include media-laptop {
     padding: 80px 0;
   }
   @include media-tablet {
     padding: 50px 0;
     overflow: hidden;
+  }
+  &__inner {
+    @include media-tablet {
+      position: relative;
+    }
   }
   &__wrapper {
     position: relative;
@@ -21,6 +27,7 @@
       padding: 35px;
     }
     @include media-tablet {
+      position: unset;
       width: 280px;
       padding: 20px 15px;
       overflow: visible;
@@ -85,9 +92,9 @@
       width: 185px;
     }
     @include media-tablet {
-      right: -44px;
+      right: -5px;
       bottom: -12px;
-      width: 112px;
+      width: 110px;
     }
   }
 }

@@ -18,6 +18,9 @@
     border-radius: 0;
     outline: none;
     -webkit-appearance: none;
+    &:focus {
+      outline: none;
+    }
     &:focus,
     &.filled {
       ~ label {

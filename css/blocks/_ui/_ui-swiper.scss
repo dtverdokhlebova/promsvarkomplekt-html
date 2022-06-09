@@ -33,6 +33,7 @@
           background-repeat: no-repeat;
           background-position: center;
           border-radius: inherit;
+          image-rendering: -webkit-optimize-contrast;
           filter: brightness(0) invert(0.8);
           transition: 0.3s;
         }

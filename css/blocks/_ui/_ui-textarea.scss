@@ -34,5 +34,8 @@
       text-transform: uppercase;
       color: #fff;
     }
+    &:focus {
+      outline: none;
+    }
   }
 }

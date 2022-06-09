@@ -58,25 +58,6 @@
     @include media-tablet {
       width: 84px;
     }
-    &-visible {
-      transition: 0.3s;
-    }
-    &-hidden {
-      position: absolute;
-      top: -7px;
-      right: -10px;
-      left: -2px;
-      opacity: 0;
-      transition: 0.3s;
-      @include media-laptop {
-        top: -5px;
-        right: -8px;
-      }
-      @include media-tablet {
-        top: -2px;
-        right: -6px;
-      }
-    }
   }
   &__ui-button {
     font-weight: 500;
@@ -212,11 +193,14 @@
     right: 0;
     bottom: 0;
     z-index: 105;
-    display: none;
+    visibility: hidden;
     width: 70%;
     max-width: 790px;
     font: 500 18px/1.1 $font;
     background: $grey;
+    opacity: 0;
+    transform: translateX(200%);
+    transition: 0.4s;
     @include media-laptop {
       font-size: 16px;
     }
@@ -241,11 +225,12 @@
       margin: auto 0;
       font: 500 25px/1.2 $font;
       text-transform: uppercase;
+      list-style-type: none;
       @include media-laptop {
         font-size: 18px;
       }
       @include media-tablet {
-        margin: auto;
+        margin: auto 0;
         padding-left: 30px;
         font-size: 12px;
       }
@@ -258,6 +243,8 @@
         }
         a {
           position: relative;
+          text-decoration: none;
+          color: inherit;
           &::before,
           &::after {
             content: '';
@@ -269,6 +256,7 @@
             opacity: 0;
             transition: inherit;
             @include media-tablet {
+              top: -1px;
               width: 7px;
               border-width: 1px;
             }
@@ -303,6 +291,11 @@
       margin-top: auto;
       text-align: center;
     }
+    &--open {
+      visibility: visible;
+      opacity: 1;
+      transform: translateX(0);
+    }
     .ui-button {
       margin: 0 auto;
     }
@@ -327,18 +320,6 @@
         }
         &__ui-button {
           opacity: 0;
-        }
-      }
-    }
-  }
-  &--scroll {
-    .header {
-      &__logo {
-        &-visible {
-          opacity: 0;
-        }
-        &-hidden {
-          opacity: 1;
         }
       }
     }

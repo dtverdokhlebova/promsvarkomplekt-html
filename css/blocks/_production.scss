@@ -10,6 +10,8 @@
   &__item {
     position: relative;
     display: block;
+    text-decoration: none;
+    color: inherit;
     border-radius: 10px;
     overflow: hidden;
     &:hover {
@@ -20,6 +22,7 @@
           }
         }
         &__ui-button {
+          transform: translateY(0);
           opacity: 1;
           pointer-events: all;
         }
@@ -36,10 +39,6 @@
     aspect-ratio: 1 / 0.975;
     @include media-laptop {
       padding: 20px;
-    }
-    @include media-tablet {
-      min-height: 280px;
-      aspect-ratio: unset;
     }
   }
   &__count {
@@ -60,9 +59,13 @@
   &__ui-button {
     width: 100%;
     margin-top: auto;
+    transform: translateY(20px);
     opacity: 0;
+    transition: opacity 0.5s, transform 0.5s linear, color 0.3s;
     pointer-events: none;
     @include media-tablet {
+      transform: translateY(0);
+      line-height: 14px;
       opacity: 1;
       pointer-events: all;
     }

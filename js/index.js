@@ -13,15 +13,6 @@ document.addEventListener('DOMContentLoaded', function () {
   loader()
 })
 
-$(window).scroll(function () {
-  const scrollValue = $(window).scrollTop()
-  if (scrollValue > 110) {
-    $('.header').addClass('header--scroll')
-  } else {
-    $('.header').removeClass('header--scroll')
-  }
-})
-
 function loader() {
   $('html').addClass('ov-hidden')
 
@@ -48,14 +39,14 @@ function headerBurgerOpen() {
   $('.header__burger-btn').addClass('active')
   $('.header').addClass('header--open')
   $('.header-overlay').fadeIn()
-  $('.header-burger').fadeIn()
+  $('.header-burger').addClass('header-burger--open')
 }
 function headerBurgerClose() {
   $('.header__burger-btn').removeClass('active')
   $('.header').removeClass('header--open')
   $('html').removeClass('ov-hidden')
   $('.header-overlay').fadeOut()
-  $('.header-burger').fadeOut()
+  $('.header-burger').removeClass('header-burger--open')
 }
 
 function headerDropPhones() {
