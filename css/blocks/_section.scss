@@ -6,6 +6,9 @@
   @include media-tablet {
     margin-top: 60px;
   }
+  &--ov-hidden {
+    overflow: hidden;
+  }
   &--laptop-hidden {
     @include media-laptop {
       overflow: hidden;

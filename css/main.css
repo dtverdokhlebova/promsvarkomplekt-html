@@ -2925,6 +2925,10 @@ img {
   }
 }
 
+.section--ov-hidden {
+  overflow: hidden;
+}
+
 @media (max-width: 1310px) {
   .section--laptop-hidden {
     overflow: hidden;
