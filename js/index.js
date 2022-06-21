@@ -5,6 +5,7 @@ document.addEventListener('DOMContentLoaded', function () {
   headerDropPhones()
   anchor()
   clientsSlider()
+  bannerParallax()
   stagesSlider()
   gallerySlider()
   popupScripts()
@@ -246,8 +247,9 @@ function contacts() {
     myMap = new ymaps.Map('contactsMap', {
       center: [52.7591, mapcenterX],
       zoom: mapzoom,
-      // controls: ['ZoomControlControl']
       controls: []
+    }, {
+      suppressMapOpenBlock: true
     })
     const placemark = new ymaps.Placemark([52.7591, 41.468003], {}, {
       iconLayout: 'default#image',
@@ -269,4 +271,10 @@ function toTop() {
     $('html, body').animate({ scrollTop: 0 }, 600)
     return false
   })
+}
+
+function bannerParallax() {
+  const bannerImg = document.querySelector('.banner__parallax img')
+  const viewportHeight = document.documentElement.clientHeight
+  bannerImg.style.height = `${viewportHeight}px`
 }
